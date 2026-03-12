@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corporate Chauffeur London | Ridealux Executive Travel</title>
+<meta name="description" content="Premium corporate chauffeur service in London. Ridealux provides executive ground transportation for business professionals, board members and corporate accounts.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --gold: #C9A84C; --gold-light: #E8C97A; --black: #0A0A0A; --charcoal: #1A1A1A; --dark: #111111; --grey: #888888; --light-grey: #CCCCCC; --white: #FAFAFA; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--black); color: var(--white); font-family: 'Montserrat', sans-serif; font-weight: 300; line-height: 1.8; overflow-x: hidden; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 24px 48px; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(to bottom, rgba(10,10,10,0.95), transparent); }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 300; color: var(--white); text-decoration: none; }
+  .nav-logo em { font-style: italic; color: var(--gold); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { font-size: 10px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--light-grey); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--gold); }
+  .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; padding: 80px 40px; background: radial-gradient(ellipse at 50% 60%, #1c1500 0%, #0A0A0A 70%); overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(201,168,76,0.03) 60px, rgba(201,168,76,0.03) 61px), repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(201,168,76,0.03) 60px, rgba(201,168,76,0.03) 61px); }
+  .hero-badge { display: inline-block; border: 1px solid var(--gold); color: var(--gold); font-size: 10px; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; padding: 8px 24px; margin-bottom: 40px; position: relative; z-index: 1; animation: fadeUp 1s ease both; }
+  .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(48px, 7vw, 90px); font-weight: 300; line-height: 1.05; color: var(--white); position: relative; z-index: 1; animation: fadeUp 1s ease 0.2s both; }
+  .hero h1 em { font-style: italic; color: var(--gold); }
+  .hero-sub { margin-top: 28px; font-size: 13px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: var(--grey); position: relative; z-index: 1; animation: fadeUp 1s ease 0.4s both; }
+  .hero-divider { width: 1px; height: 80px; background: linear-gradient(to bottom, var(--gold), transparent); margin: 48px auto 0; }
+  .gold-rule { width: 100%; height: 1px; background: linear-gradient(to right, transparent, var(--gold), transparent); }
+  .section { padding: 100px 40px; max-width: 1100px; margin: 0 auto; text-align: center; }
+  .section-label { font-size: 10px; font-weight: 500; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 16px; }
+  .section-label::before, .section-label::after { content: ''; display: inline-block; width: 40px; height: 1px; background: var(--gold); }
+  h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 58px); font-weight: 300; line-height: 1.1; color: var(--white); margin-bottom: 48px; text-align: center; }
+  h2 em { font-style: italic; color: var(--gold); }
+  p { font-size: 14px; color: var(--light-grey); line-height: 1.9; margin-bottom: 20px; max-width: 700px; margin-left: auto; margin-right: auto; text-align: center; }
+
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2px; background: rgba(201,168,76,0.1); margin-top: 60px; }
+  .service-card { background: var(--charcoal); padding: 48px 36px; text-align: center; position: relative; overflow: hidden; transition: background 0.3s; }
+  .service-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--gold); transition: height 0.4s ease; }
+  .service-card:hover { background: #1e1e1e; }
+  .service-card:hover::before { height: 100%; }
+  .service-num { font-family: 'Cormorant Garamond', serif; font-size: 56px; font-weight: 300; color: rgba(201,168,76,0.12); line-height: 1; margin-bottom: 20px; display: block; }
+  .service-title { font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--white); margin-bottom: 16px; }
+  .service-card p { font-size: 12px; color: var(--grey); margin: 0; }
+
+  .stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2px; background: rgba(201,168,76,0.08); margin-top: 60px; }
+  .stat-box { background: var(--dark); padding: 48px 32px; text-align: center; }
+  .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 64px; font-weight: 300; color: var(--gold); line-height: 1; margin-bottom: 12px; }
+  .stat-label { font-size: 10px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--grey); }
+
+  .pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; margin-top: 60px; }
+  .pillar { border-top: 1px solid rgba(201,168,76,0.3); padding-top: 28px; text-align: center; }
+  .pillar-title { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+  .pillar p { font-size: 12px; color: var(--grey); margin: 0; }
+
+  .cta-wrap { background: linear-gradient(135deg, #0f0e00 0%, #1a1500 50%, #0A0A0A 100%); padding: 120px 40px; text-align: center; position: relative; overflow: hidden; }
+  .cta-wrap::before { content: 'RIDEALUX'; position: absolute; font-family: 'Cormorant Garamond', serif; font-size: 180px; font-weight: 300; color: rgba(201,168,76,0.04); top: 50%; left: 50%; transform: translate(-50%, -50%); white-space: nowrap; pointer-events: none; letter-spacing: 20px; }
+  .cta-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
+  .cta-inner h2 { font-size: clamp(42px, 6vw, 72px); margin-bottom: 24px; }
+  .cta-btn { display: inline-block; background: var(--gold); color: var(--black); font-size: 11px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; padding: 18px 56px; text-decoration: none; transition: background 0.3s, transform 0.2s; }
+  .cta-btn:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .contact-strip { background: var(--charcoal); padding: 60px 40px; }
+  .contact-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 40px; text-align: center; }
+  .contact-label { font-size: 10px; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+  .contact-value { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--white); text-decoration: none; display: block; }
+  .contact-value:hover { color: var(--gold); }
+  footer { background: var(--black); padding: 40px; text-align: center; border-top: 1px solid rgba(201,168,76,0.15); }
+  footer p { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.2); margin: 0; max-width: 100%; }
+  footer span { color: var(--gold); }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 768px) { nav { padding: 20px 24px; } .nav-links { display: none; } .section { padding: 70px 24px; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Ridea<em>lux</em></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="airport-transfer.html">Airport</a></li>
+    <li><a href="corporate-chauffeur.html">Corporate</a></li>
+    <li><a href="events-transportation.html">Events</a></li>
+    <li><a href="roadshow-transportation.html">Roadshow</a></li>
+    <li><a href="london-chauffeur.html">London</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">Executive Ground Transportation</div>
+  <h1>Corporate<br><em>Chauffeur</em></h1>
+  <p class="hero-sub">London &nbsp;·&nbsp; Discreet &nbsp;·&nbsp; Reliable &nbsp;·&nbsp; Professional</p>
+  <div class="hero-divider"></div>
+</section>
+
+<div class="gold-rule"></div>
+
+<section class="section">
+  <div class="section-label">Corporate Travel</div>
+  <h2>Executive Travel <em>Redefined</em><br>for London Business</h2>
+  <p>Ridealux is the corporate chauffeur service trusted by London's executives, board members, and business professionals. We understand that corporate travel demands more than just a vehicle — it requires punctuality, absolute discretion, and a service that reflects the professionalism of your business.</p>
+  <p>Whether you need a daily executive commute, client collection from the airport, or multi-stop business travel across the City and Canary Wharf, Ridealux delivers a consistent, premium corporate chauffeur experience every time. Visit <a href="https://ridealux.com" style="color:var(--gold);text-decoration:none;">ridealux.com</a> to set up a corporate account.</p>
+</section>
+
+<div class="gold-rule"></div>
+
+<section class="section">
+  <div class="section-label">Our Numbers</div>
+  <h2>Built for <em>Business</em></h2>
+  <div class="stats-row">
+    <div class="stat-box"><div class="stat-num">24/7</div><div class="stat-label">Always Available</div></div>
+    <div class="stat-box"><div class="stat-num">5★</div><div class="stat-label">Service Standard</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Hidden Fees</div></div>
+    <div class="stat-box"><div class="stat-num">365</div><div class="stat-label">Days a Year</div></div>
+  </div>
+</section>
+
+<div class="gold-rule"></div>
+
+<section class="section">
+  <div class="section-label">Corporate Services</div>
+  <h2>What We Do for <em>Your Business</em></h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-num">01</span>
+      <div class="service-title">Executive Commute</div>
+      <p>Daily door-to-door chauffeur service for senior executives. Consistent, discreet, and built around your schedule.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">02</span>
+      <div class="service-title">Client Collections</div>
+      <p>First impressions matter. Impress clients and stakeholders with a professional chauffeur collection from airports, hotels, or offices.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">03</span>
+      <div class="service-title">Multi-Stop Business Travel</div>
+      <p>Dedicated chauffeur for full-day business travel across London. Multiple meetings, zero logistics stress.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">04</span>
+      <div class="service-title">Corporate Account</div>
+      <p>Streamlined account management, consolidated invoicing, and priority booking for regular corporate clients.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">05</span>
+      <div class="service-title">Team Travel</div>
+      <p>Coordinated ground transport for corporate teams, delegations, and visiting executives requiring multiple vehicles.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">06</span>
+      <div class="service-title">Late Night Business</div>
+      <p>Post-event, late-night, and early-morning executive travel with the same professional standard at any hour.</p>
+    </div>
+  </div>
+</section>
+
+<div class="gold-rule"></div>
+
+<section class="section">
+  <div class="section-label">Why Ridealux Corporate</div>
+  <h2>The Corporate <em>Standard</em></h2>
+  <div class="pillars">
+    <div class="pillar"><div class="pillar-title">Absolute Discretion</div><p>All Ridealux chauffeurs operate under strict confidentiality. Your conversations, meetings, and movements remain completely private.</p></div>
+    <div class="pillar"><div class="pillar-title">Punctuality</div><p>We understand that in business, time is money. Every Ridealux corporate transfer is planned to arrive ahead of schedule.</p></div>
+    <div class="pillar"><div class="pillar-title">Professional Chauffeurs</div><p>Fully vetted, licensed, and trained in corporate etiquette. Our chauffeurs present themselves to the highest professional standard.</p></div>
+    <div class="pillar"><div class="pillar-title">Fixed Corporate Rates</div><p>Transparent, agreed pricing for corporate accounts. No surprises on invoices — just consistent, professional billing.</p></div>
+    <div class="pillar"><div class="pillar-title">Premium Fleet</div><p>Mercedes S-Class, BMW 7 Series, and Range Rover — vehicles that reflect the standard your business demands.</p></div>
+    <div class="pillar"><div class="pillar-title">Account Management</div><p>Dedicated account management for corporate clients with consolidated monthly invoicing and booking history.</p></div>
+  </div>
+</section>
+
+<div class="gold-rule"></div>
+
+<div class="cta-wrap">
+  <div class="cta-inner">
+    <div class="section-label" style="justify-content:center;">Corporate Enquiry</div>
+    <h2>Set Up Your <em>Corporate</em><br>Account Today</h2>
+    <p>Join London's leading businesses who trust Ridealux for their executive ground transportation needs.</p>
+    <a href="https://ridealux.com" class="cta-btn">Visit ridealux.com</a>
+  </div>
+</div>
+
+<div class="contact-strip">
+  <div class="contact-inner">
+    <div><div class="contact-label">Website</div><a href="https://ridealux.com" class="contact-value">ridealux.com</a></div>
+    <div><div class="contact-label">Service</div><span class="contact-value">Corporate Chauffeur</span></div>
+    <div><div class="contact-label">Location</div><span class="contact-value">London, UK</span></div>
+    <div><div class="contact-label">Available</div><span class="contact-value">24 / 7 / 365</span></div>
+  </div>
+</div>
+<footer><p><span>Ridealux</span> &nbsp;·&nbsp; Corporate Chauffeur London &nbsp;·&nbsp; <span>ridealux.com</span></p></footer>
+</body>
+</html>

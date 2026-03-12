@@ -3,22 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Complete Guide to Chauffeur Services in London 2026</title>
-<meta name="description" content="A comprehensive informational guide covering everything you need to know about chauffeur services in London — airport transfers, corporate travel, roadshows, events and more.">
+<title>Ridealux — Premium Chauffeur Service in London</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --gold: #C9A84C;
     --gold-light: #E8C97A;
+    --gold-pale: #F5EDD6;
     --black: #0A0A0A;
     --charcoal: #1A1A1A;
     --dark: #111111;
+    --mid: #2A2A2A;
     --grey: #888888;
     --light-grey: #CCCCCC;
     --white: #FAFAFA;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
+
   html { scroll-behavior: smooth; }
 
   body {
@@ -32,15 +34,16 @@
 
   /* ── HERO ── */
   .hero {
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
     padding: 80px 40px;
     background: radial-gradient(ellipse at 50% 60%, #1c1500 0%, #0A0A0A 70%);
-    position: relative;
     overflow: hidden;
   }
 
@@ -49,14 +52,27 @@
     position: absolute;
     inset: 0;
     background:
-      repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(201,168,76,0.03) 60px, rgba(201,168,76,0.03) 61px),
-      repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(201,168,76,0.03) 60px, rgba(201,168,76,0.03) 61px);
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 60px,
+        rgba(201,168,76,0.03) 60px,
+        rgba(201,168,76,0.03) 61px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 60px,
+        rgba(201,168,76,0.03) 60px,
+        rgba(201,168,76,0.03) 61px
+      );
   }
 
   .hero-badge {
     display: inline-block;
     border: 1px solid var(--gold);
     color: var(--gold);
+    font-family: 'Montserrat', sans-serif;
     font-size: 10px;
     font-weight: 500;
     letter-spacing: 4px;
@@ -70,14 +86,14 @@
 
   .hero h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(38px, 6vw, 78px);
+    font-size: clamp(52px, 8vw, 100px);
     font-weight: 300;
-    line-height: 1.1;
+    line-height: 1.0;
+    letter-spacing: -1px;
     color: var(--white);
     position: relative;
     z-index: 1;
     animation: fadeUp 1s ease 0.2s both;
-    max-width: 900px;
   }
 
   .hero h1 em {
@@ -86,8 +102,8 @@
   }
 
   .hero-sub {
-    margin-top: 28px;
-    font-size: 12px;
+    margin-top: 32px;
+    font-size: 13px;
     font-weight: 400;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -99,26 +115,20 @@
 
   .hero-divider {
     width: 1px;
-    height: 60px;
+    height: 80px;
     background: linear-gradient(to bottom, var(--gold), transparent);
-    margin: 40px auto 0;
+    margin: 48px auto 0;
     position: relative;
     z-index: 1;
-  }
-
-  /* ── GOLD RULE ── */
-  .gold-rule {
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    animation: fadeUp 1s ease 0.6s both;
   }
 
   /* ── SECTIONS ── */
   .section {
-    padding: 90px 40px;
-    max-width: 1000px;
-    margin: 0 auto;
     text-align: center;
+    padding: 100px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
   }
 
   .section-label {
@@ -129,13 +139,20 @@
     color: var(--gold);
     margin-bottom: 20px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 16px;
   }
 
-  .section-label::before,
-  .section-label::after {
+    .section-label::after {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .section-label::before {
     content: '';
     display: inline-block;
     width: 40px;
@@ -145,24 +162,26 @@
 
   h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(32px, 5vw, 54px);
+    font-size: clamp(36px, 5vw, 58px);
     font-weight: 300;
     line-height: 1.1;
     color: var(--white);
-    margin-bottom: 40px;
+    margin-bottom: 48px;
     text-align: center;
   }
 
-  h2 em { font-style: italic; color: var(--gold); }
+  h2 em {
+    font-style: italic;
+    color: var(--gold);
+  }
 
   h3 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 400;
     color: var(--gold-light);
-    margin-bottom: 14px;
-    margin-top: 0;
-    text-align: center;
+    margin-bottom: 16px;
+    margin-top: 56px;
   }
 
   p {
@@ -170,89 +189,99 @@
     color: var(--light-grey);
     line-height: 1.9;
     margin-bottom: 20px;
-    max-width: 700px;
+    max-width: 720px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
   }
 
-  /* ── INFO CARDS ── */
-  .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2px;
-    background: rgba(201,168,76,0.08);
-    margin-top: 56px;
+  /* ── GOLD RULE ── */
+  .gold-rule {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    margin: 0;
   }
 
-  .card {
-    background: var(--charcoal);
-    padding: 44px 36px;
+  /* ── SERVICES GRID ── */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2px;
+    margin-top: 60px;
+    background: rgba(201,168,76,0.1);
+  }
+
+  .service-card {
     text-align: center;
+    background: var(--charcoal);
+    padding: 48px 40px;
     position: relative;
     overflow: hidden;
-    transition: background 0.3s;
+    transition: background 0.3s ease;
   }
 
-  .card::before {
+  .service-card::before {
     content: '';
     position: absolute;
     top: 0; left: 0;
-    width: 100%;
-    height: 2px;
+    width: 3px;
+    height: 0;
     background: var(--gold);
-    transform: scaleX(0);
-    transition: transform 0.4s ease;
+    transition: height 0.4s ease;
   }
 
-  .card:hover { background: #1e1e1e; }
-  .card:hover::before { transform: scaleX(1); }
+  .service-card:hover { background: #1e1e1e; }
+  .service-card:hover::before { height: 100%; }
 
-  .card-num {
+  .service-number {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 52px;
+    font-size: 64px;
     font-weight: 300;
     color: rgba(201,168,76,0.12);
     line-height: 1;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+    display: block;
   }
 
-  .card h3 {
-    font-size: 20px;
-    margin-bottom: 14px;
+  .service-card h3 {
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 16px;
     color: var(--white);
   }
 
-  .card p {
+  .service-card p {
     font-size: 13px;
     color: var(--grey);
     margin: 0;
   }
 
-  /* ── TIPS ── */
-  .tips-grid {
+  /* ── WHY CHOOSE ── */
+  .pillars {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 32px;
-    margin-top: 56px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
   }
 
-  .tip {
-    border-top: 1px solid rgba(201,168,76,0.3);
-    padding-top: 28px;
+  .pillar {
     text-align: center;
+    border-top: 1px solid rgba(201,168,76,0.3);
+    padding-top: 32px;
   }
 
-  .tip-title {
+  .pillar-title {
+    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--gold);
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
 
-  .tip p {
+  .pillar p {
     font-size: 13px;
     color: var(--grey);
     margin: 0;
@@ -262,59 +291,68 @@
   .areas-wrap {
     background: var(--charcoal);
     padding: 80px 40px;
-    text-align: center;
   }
 
-  .areas-inner { max-width: 1000px; margin: 0 auto; }
+  .areas-inner {
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
 
   .areas-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 0;
     margin-top: 48px;
     border: 1px solid rgba(201,168,76,0.15);
   }
 
   .area-item {
-    padding: 18px 20px;
+    text-align: center;
+    padding: 20px 24px;
     font-size: 12px;
     font-weight: 500;
     letter-spacing: 1px;
     color: var(--light-grey);
     border-right: 1px solid rgba(201,168,76,0.1);
     border-bottom: 1px solid rgba(201,168,76,0.1);
-    text-align: center;
     transition: color 0.2s, background 0.2s;
   }
 
-  .area-item:hover { color: var(--gold); background: rgba(201,168,76,0.05); }
+  .area-item:hover {
+    color: var(--gold);
+    background: rgba(201,168,76,0.05);
+  }
 
-  /* ── VEHICLES TABLE ── */
-  .vehicles-grid {
+  /* ── FLEET ── */
+  .fleet-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2px;
     background: rgba(201,168,76,0.08);
-    margin-top: 56px;
+    margin-top: 60px;
   }
 
-  .vehicle-card {
-    background: var(--dark);
-    padding: 36px;
+  .fleet-card {
     text-align: center;
+    background: var(--dark);
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
   }
 
-  .vehicle-name {
+  .fleet-car {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 400;
     color: var(--white);
-    margin-bottom: 8px;
   }
 
-  .vehicle-type {
-    font-size: 10px;
-    font-weight: 600;
+  .fleet-type {
+    font-size: 11px;
+    font-weight: 500;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--gold);
@@ -322,49 +360,53 @@
 
   /* ── FAQ ── */
   .faq-list {
-    margin-top: 56px;
+    margin-top: 60px;
     border-top: 1px solid rgba(201,168,76,0.2);
   }
 
   .faq-item {
     border-bottom: 1px solid rgba(201,168,76,0.1);
     padding: 36px 0;
+    display: grid;
+    grid-template-columns: 1fr;
     text-align: center;
+    gap: 60px;
+    align-items: start;
   }
 
   .faq-q {
+    text-align: center;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
     color: var(--gold-light);
-    margin-bottom: 16px;
+    line-height: 1.3;
   }
 
   .faq-a {
     font-size: 13px;
     color: var(--grey);
     line-height: 1.8;
-    max-width: 680px;
-    margin: 0 auto;
-    text-align: center;
+    margin: 0;
+    max-width: 100%;
   }
 
-  /* ── REFERENCE BOX ── */
-  .ref-wrap {
+  /* ── BOOKING CTA ── */
+  .cta-wrap {
     background: linear-gradient(135deg, #0f0e00 0%, #1a1500 50%, #0A0A0A 100%);
-    padding: 100px 40px;
+    padding: 120px 40px;
     text-align: center;
     position: relative;
     overflow: hidden;
   }
 
-  .ref-wrap::before {
-    content: 'LONDON';
+  .cta-wrap::before {
+    content: 'RIDEALUX';
     position: absolute;
     font-family: 'Cormorant Garamond', serif;
     font-size: 200px;
     font-weight: 300;
-    color: rgba(201,168,76,0.03);
+    color: rgba(201,168,76,0.04);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -373,35 +415,88 @@
     letter-spacing: 20px;
   }
 
-  .ref-inner {
+  .cta-inner {
     position: relative;
     z-index: 1;
-    max-width: 680px;
+    max-width: 700px;
     margin: 0 auto;
   }
 
-  .ref-inner h2 { font-size: clamp(36px, 5vw, 60px); margin-bottom: 20px; }
-  .ref-inner p { color: var(--grey); margin-bottom: 40px; }
+  .cta-inner h2 {
+    font-size: clamp(42px, 6vw, 72px);
+    margin-bottom: 24px;
+  }
 
-  .ref-link {
+  .cta-inner p {
+    margin: 0 auto 48px;
+    font-size: 14px;
+    color: var(--grey);
+    max-width: 500px;
+  }
+
+  .cta-btn {
     display: inline-block;
-    border: 1px solid var(--gold);
-    color: var(--gold);
+    background: var(--gold);
+    color: var(--black);
+    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 4px;
     text-transform: uppercase;
-    padding: 16px 48px;
+    padding: 18px 56px;
     text-decoration: none;
-    transition: background 0.3s, color 0.3s;
+    transition: background 0.3s, transform 0.2s;
   }
 
-  .ref-link:hover { background: var(--gold); color: var(--black); }
+  .cta-btn:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+  }
+
+  /* ── CONTACT ── */
+  .contact-strip {
+    background: var(--charcoal);
+    padding: 60px 40px;
+  }
+
+  .contact-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+  }
+
+  .contact-item {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .contact-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .contact-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .contact-value:hover { color: var(--gold); }
 
   /* ── FOOTER ── */
   footer {
     background: var(--black);
-    padding: 36px 40px;
+    padding: 40px;
     text-align: center;
     border-top: 1px solid rgba(201,168,76,0.15);
   }
@@ -423,20 +518,46 @@
     to   { opacity: 1; transform: translateY(0); }
   }
 
+  /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
-    .section { padding: 60px 24px; }
+    .section {
+    text-align: center; padding: 70px 24px; }
+    .faq-item { grid-template-columns: 1fr; gap: 16px; }
     .areas-wrap { padding: 60px 24px; }
-    .ref-wrap { padding: 70px 24px; }
+    .cta-wrap { padding: 80px 24px; }
+    .contact-strip { padding: 48px 24px; }
   }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 24px 48px; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(to bottom, rgba(10,10,10,0.95), transparent); }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 300; color: var(--white); text-decoration: none; }
+  .nav-logo em { font-style: italic; color: var(--gold); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { font-size: 10px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--light-grey); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--gold); }
+  @media (max-width: 768px) { nav { padding: 20px 24px; } .nav-links { display: none; } }
 </style>
 </head>
 <body>
 
+<nav>
+  <a href="index.html" class="nav-logo">Ridea<em>lux</em></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="airport-transfer.html">Airport</a></li>
+    <li><a href="corporate-chauffeur.html">Corporate</a></li>
+    <li><a href="events-transportation.html">Events</a></li>
+    <li><a href="roadshow-transportation.html">Roadshow</a></li>
+    <li><a href="london-chauffeur.html">London</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">Informational Guide &nbsp;·&nbsp; London 2026</div>
-  <h1>The Complete Guide to<br><em>Chauffeur Services</em><br>in London</h1>
-  <p class="hero-sub">Airport Transfers &nbsp;·&nbsp; Corporate Travel &nbsp;·&nbsp; Events &nbsp;·&nbsp; Roadshows</p>
+  <div class="hero-badge">London's Premium Chauffeur Service</div>
+  <h1>Ridea<em>lux</em></h1>
+  <p class="hero-sub">Professional &nbsp;·&nbsp; Punctual &nbsp;·&nbsp; Premium</p>
   <div class="hero-divider"></div>
 </section>
 
@@ -444,100 +565,103 @@
 
 <!-- INTRO -->
 <section class="section">
-  <div class="section-label">Overview</div>
-  <h2>What Are <em>Chauffeur Services</em><br>in London?</h2>
-  <p>Chauffeur services in London offer a premium alternative to standard taxis and rideshare apps, providing professionally trained drivers, high-end vehicles, and a level of service designed around discretion, punctuality, and comfort.</p>
-  <p>Unlike regular minicabs, chauffeur services operate with pre-booked, fixed-price journeys and are commonly used by corporate clients, business travelers, executives, and individuals who require reliable, high-standard ground transportation across the capital.</p>
-  <p>This guide covers everything you need to know about chauffeur services in London — from the different types available to what to look for when choosing a provider. One well-regarded example of a London chauffeur company is <a href="https://ridealux.com" style="color:var(--gold);text-decoration:none;">Ridealux</a>, which covers airport transfers, corporate travel, roadshows, events, and group transportation across London and the UK.</p>
+  <div class="section-label">About Ridealux</div>
+  <h2>London's Chauffeur Service,<br><em>Redefined</em></h2>
+  <p>Ridealux is one of London's most trusted premium chauffeur service providers, delivering exceptional ground transportation experiences for discerning clients across the capital and beyond. From seamless airport transfers to high-stakes corporate travel, Ridealux combines professional chauffeurs, a meticulously maintained fleet, and an unwavering commitment to punctuality.</p>
+  <p>Every ride with Ridealux is defined by discretion, comfort, and precision — because when you travel with us, the journey matters as much as the destination. Visit <a href="https://ridealux.com" style="color:var(--gold);text-decoration:none;">ridealux.com</a> to book your chauffeur today.</p>
 </section>
 
 <div class="gold-rule"></div>
 
-<!-- TYPES OF SERVICE -->
+<!-- SERVICES -->
 <section class="section">
-  <div class="section-label">Types of Service</div>
-  <h2>Types of <em>Chauffeur Services</em><br>Available in London</h2>
-  <p>London's chauffeur industry covers a wide range of travel requirements. Here is a breakdown of the most common service types and what each involves.</p>
+  <div class="section-label">What We Offer</div>
+  <h2>Our <em>Chauffeur</em> Services</h2>
 
-  <div class="cards-grid">
+  <div class="services-grid">
 
-    <div class="card">
-      <div class="card-num">01</div>
+    <a href="airport-transfer.html" class="service-card" style="text-decoration:none;display:block;">
+      <span class="service-number">01</span>
       <h3>Airport Transfers</h3>
-      <p>The most in-demand chauffeur service in London. Covers all five major airports — Heathrow, Gatwick, Stansted, Luton, and London City. Quality providers include real-time flight tracking, meet and greet, and fixed pricing regardless of delays.</p>
-    </div>
+      <p>Seamless transfers across Heathrow, Gatwick, Stansted, Luton, and London City Airport. Real-time flight tracking, meet and greet, and complimentary waiting time included on every airport journey.</p>
+      <span style="display:inline-block;margin-top:16px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);">Learn More →</span>
+    </a>
 
-    <div class="card">
-      <div class="card-num">02</div>
+    <a href="corporate-chauffeur.html" class="service-card" style="text-decoration:none;display:block;">
+      <span class="service-number">02</span>
       <h3>Corporate Chauffeur</h3>
-      <p>Used by executives, board members, and business professionals who require consistent, discreet, and reliable transportation for daily commutes, client meetings, and multi-stop business travel across London.</p>
-    </div>
+      <p>Trusted by executives and board members for daily commutes, client collections, and multi-stop business travel. Discreet, professional, and built around your schedule.</p>
+      <span style="display:inline-block;margin-top:16px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);">Learn More →</span>
+    </a>
 
-    <div class="card">
-      <div class="card-num">03</div>
+    <a href="roadshow-transportation.html" class="service-card" style="text-decoration:none;display:block;">
+      <span class="service-number">03</span>
       <h3>Roadshow Transportation</h3>
-      <p>Specialist service for investment banks and financial institutions running multi-venue investor presentations. Requires precise scheduling, dedicated chauffeurs, and seamless coordination across multiple stops throughout the day.</p>
-    </div>
+      <p>Specialist transportation for investment banks and financial institutions conducting multi-venue roadshow presentations. Precise scheduling, dedicated chauffeurs, and zero logistical distractions.</p>
+      <span style="display:inline-block;margin-top:16px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);">Learn More →</span>
+    </a>
 
-    <div class="card">
-      <div class="card-num">04</div>
+    <a href="events-transportation.html" class="service-card" style="text-decoration:none;display:block;">
+      <span class="service-number">04</span>
       <h3>Events Transportation</h3>
-      <p>Chauffeur services for corporate galas, award ceremonies, product launches, film premieres, and private events. Covers both individual and group transfers with experienced drivers familiar with London's major venues.</p>
-    </div>
+      <p>Elegant transport for corporate galas, award ceremonies, product launches, film premieres, and high-profile events across London. Arrive and depart in complete comfort and style.</p>
+      <span style="display:inline-block;margin-top:16px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);">Learn More →</span>
+    </a>
 
-    <div class="card">
-      <div class="card-num">05</div>
+    <a href="london-chauffeur.html" class="service-card" style="text-decoration:none;display:block;">
+      <span class="service-number">05</span>
       <h3>Group Transportation</h3>
-      <p>Multi-passenger chauffeur solutions for corporate teams, delegations, and VIP groups. Typically involves luxury people carriers and coordinated multi-vehicle arrangements for larger parties traveling together.</p>
-    </div>
+      <p>Premium group travel solutions for corporate teams, delegations, and VIP parties. Multi-vehicle coordination and spacious luxury people carriers for groups of all sizes.</p>
+      <span style="display:inline-block;margin-top:16px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);">Learn More →</span>
+    </a>
 
-    <div class="card">
-      <div class="card-num">06</div>
+    <a href="contact.html" class="service-card" style="text-decoration:none;display:block;">
+      <span class="service-number">06</span>
       <h3>Private Chauffeur Hire</h3>
-      <p>Dedicated chauffeur available by the hour, half day, or full day. Suited to shopping trips, private appointments, city tours, and any occasion where ongoing flexible transportation is required throughout the day.</p>
-    </div>
+      <p>Dedicated chauffeur available for full days, half days, or specific hours. Ideal for shopping trips, private appointments, city tours, or any occasion requiring a trusted professional at your disposal.</p>
+      <span style="display:inline-block;margin-top:16px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);">Enquire →</span>
+    </a>
 
   </div>
 </section>
 
 <div class="gold-rule"></div>
 
-<!-- WHAT TO LOOK FOR -->
+<!-- WHY CHOOSE -->
 <section class="section">
-  <div class="section-label">Buyer's Guide</div>
-  <h2>What to Look For in a<br><em>London Chauffeur Company</em></h2>
-  <p>Not all chauffeur services in London are equal. Here are the key factors to evaluate when choosing a provider for airport transfers, corporate travel, or special occasions.</p>
+  <div class="section-label">Why Ridealux</div>
+  <h2>The <em>Standard</em> We Set</h2>
 
-  <div class="tips-grid">
+  <div class="pillars">
 
-    <div class="tip">
-      <div class="tip-title">Licensed & Insured</div>
-      <p>Always confirm the company holds a valid Private Hire Operator licence issued by Transport for London (TfL). All vehicles and drivers must be properly licensed and insured for private hire use.</p>
+    <div class="pillar">
+      <div class="pillar-title">Professional Chauffeurs</div>
+      <p>Every chauffeur is rigorously vetted, fully licensed, and trained to deliver a discreet, courteous service. Our team knows London's roads, traffic, and venues intimately.</p>
     </div>
 
-    <div class="tip">
-      <div class="tip-title">Fleet Quality</div>
-      <p>Look for a well-maintained fleet of premium vehicles including executive saloons, SUVs, and people carriers. Vehicles should be regularly serviced, immaculately presented, and appropriate for the occasion.</p>
+    <div class="pillar">
+      <div class="pillar-title">Premium Fleet</div>
+      <p>A carefully selected fleet of luxury vehicles maintained to the highest standards of cleanliness, presentation, and mechanical excellence — from executive saloons to spacious SUVs.</p>
     </div>
 
-    <div class="tip">
-      <div class="tip-title">Fixed Pricing</div>
-      <p>Reputable chauffeur companies offer fixed, transparent pricing with no hidden charges or surge pricing. Always confirm the total cost at the time of booking rather than on a meter-based system.</p>
+    <div class="pillar">
+      <div class="pillar-title">Punctuality Guaranteed</div>
+      <p>Time is your most valuable asset. Real-time flight tracking, pre-planned routes, and proactive dispatch mean you are never kept waiting.</p>
     </div>
 
-    <div class="tip">
-      <div class="tip-title">Flight Tracking</div>
-      <p>For airport transfers, a quality provider will monitor live flight data and adjust the pickup time automatically in the event of delays or early arrivals — at no additional cost to the passenger.</p>
+    <div class="pillar">
+      <div class="pillar-title">24/7 Availability</div>
+      <p>London never stops, and neither do we. Ridealux is available around the clock, 365 days a year — including early mornings, late nights, and holidays.</p>
     </div>
 
-    <div class="tip">
-      <div class="tip-title">24/7 Availability</div>
-      <p>London operates around the clock. Choose a chauffeur company that offers genuine 24-hour availability including early morning departures, late night arrivals, and public holidays.</p>
+    <div class="pillar">
+      <div class="pillar-title">Fixed Transparent Pricing</div>
+      <p>No surge pricing, no hidden fees. Every quote is confirmed at booking and never changes — so you always know exactly what you are paying.</p>
     </div>
 
-    <div class="tip">
-      <div class="tip-title">Corporate Accounts</div>
-      <p>For businesses with regular travel needs, look for providers that offer corporate account arrangements with consolidated invoicing, dedicated account management, and priority booking access.</p>
+    <div class="pillar">
+      <div class="pillar-title">Absolute Discretion</div>
+      <p>Whether you are a C-suite executive or a private individual who values privacy, Ridealux operates with the utmost confidentiality on every journey.</p>
     </div>
 
   </div>
@@ -545,18 +669,12 @@
 
 <div class="gold-rule"></div>
 
-<!-- LONDON AIRPORTS -->
+<!-- AREAS -->
 <div class="areas-wrap">
   <div class="areas-inner">
     <div class="section-label">Coverage</div>
-    <h2>London Airport & <em>Area Coverage</em></h2>
-    <p style="margin:0 auto 8px;">Most London chauffeur services operate across the following airports and London districts. Coverage varies by provider — always confirm service areas at the time of booking.</p>
+    <h2>Where We <em>Operate</em></h2>
     <div class="areas-grid">
-      <div class="area-item">Heathrow Airport</div>
-      <div class="area-item">Gatwick Airport</div>
-      <div class="area-item">Stansted Airport</div>
-      <div class="area-item">Luton Airport</div>
-      <div class="area-item">London City Airport</div>
       <div class="area-item">Central London</div>
       <div class="area-item">City of London</div>
       <div class="area-item">Canary Wharf</div>
@@ -567,6 +685,11 @@
       <div class="area-item">Westminster</div>
       <div class="area-item">Belgravia</div>
       <div class="area-item">Marylebone</div>
+      <div class="area-item">Heathrow Airport</div>
+      <div class="area-item">Gatwick Airport</div>
+      <div class="area-item">Stansted Airport</div>
+      <div class="area-item">Luton Airport</div>
+      <div class="area-item">London City Airport</div>
       <div class="area-item">Surrey</div>
       <div class="area-item">Kent</div>
       <div class="area-item">Essex</div>
@@ -579,36 +702,67 @@
 
 <div class="gold-rule"></div>
 
-<!-- COMMON VEHICLES -->
+<!-- FLEET -->
 <section class="section">
-  <div class="section-label">Fleet Guide</div>
-  <h2>Common <em>Vehicles</em> Used in<br>London Chauffeur Services</h2>
-  <p>The type of vehicle used will depend on the nature of the journey, the number of passengers, and the level of service required. Below are the most commonly used vehicle classes in London's chauffeur industry.</p>
+  <div class="section-label">Our Fleet</div>
+  <h2>Vehicles Built for <em>Excellence</em></h2>
+  <p>Every vehicle in the Ridealux fleet is selected for comfort, reliability, and presentation — maintained to the highest standards and presented immaculately for every journey.</p>
 
-  <div class="vehicles-grid">
-    <div class="vehicle-card">
-      <div class="vehicle-name">Mercedes-Benz S-Class</div>
-      <div class="vehicle-type">Executive Saloon — Up to 3 passengers</div>
+  <div class="fleet-grid">
+    <div class="fleet-card">
+      <div class="fleet-car">Mercedes-Benz S-Class</div>
+      <div class="fleet-type">Executive Saloon</div>
     </div>
-    <div class="vehicle-card">
-      <div class="vehicle-name">Mercedes-Benz E-Class</div>
-      <div class="vehicle-type">Business Saloon — Up to 3 passengers</div>
+    <div class="fleet-card">
+      <div class="fleet-car">Mercedes-Benz E-Class</div>
+      <div class="fleet-type">Business Saloon</div>
     </div>
-    <div class="vehicle-card">
-      <div class="vehicle-name">BMW 7 Series</div>
-      <div class="vehicle-type">Executive Saloon — Up to 3 passengers</div>
+    <div class="fleet-card">
+      <div class="fleet-car">BMW 7 Series</div>
+      <div class="fleet-type">Executive Saloon</div>
     </div>
-    <div class="vehicle-card">
-      <div class="vehicle-name">Mercedes-Benz V-Class</div>
-      <div class="vehicle-type">People Carrier — Up to 7 passengers</div>
+    <div class="fleet-card">
+      <div class="fleet-car">Mercedes-Benz V-Class</div>
+      <div class="fleet-type">Luxury People Carrier</div>
     </div>
-    <div class="vehicle-card">
-      <div class="vehicle-name">Range Rover</div>
-      <div class="vehicle-type">Premium SUV — Up to 4 passengers</div>
+    <div class="fleet-card">
+      <div class="fleet-car">Range Rover</div>
+      <div class="fleet-type">Premium SUV</div>
     </div>
-    <div class="vehicle-card">
-      <div class="vehicle-name">Mercedes-Benz GLE</div>
-      <div class="vehicle-type">Executive SUV — Up to 4 passengers</div>
+    <div class="fleet-card">
+      <div class="fleet-car">Mercedes-Benz GLE</div>
+      <div class="fleet-type">Executive SUV</div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-rule"></div>
+
+<!-- HOW TO BOOK -->
+<section class="section">
+  <div class="section-label">Booking Process</div>
+  <h2>How to <em>Book</em> Ridealux</h2>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2px;background:rgba(201,168,76,0.08);margin-top:60px;">
+    <div style="background:var(--charcoal);padding:40px 32px;">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:48px;color:rgba(201,168,76,0.2);margin-bottom:16px;">1</div>
+      <div style="font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Visit</div>
+      <p style="font-size:13px;color:var(--grey);margin:0;">Go to <a href="https://ridealux.com" style="color:var(--gold);text-decoration:none;">ridealux.com</a> to start your instant online booking</p>
+    </div>
+    <div style="background:var(--charcoal);padding:40px 32px;">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:48px;color:rgba(201,168,76,0.2);margin-bottom:16px;">2</div>
+      <div style="font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Choose</div>
+      <p style="font-size:13px;color:var(--grey);margin:0;">Select your service — airport transfer, corporate, events, group, or private hire</p>
+    </div>
+    <div style="background:var(--charcoal);padding:40px 32px;">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:48px;color:rgba(201,168,76,0.2);margin-bottom:16px;">3</div>
+      <div style="font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Enter Details</div>
+      <p style="font-size:13px;color:var(--grey);margin:0;">Provide your pickup location, destination, date, time, and vehicle preference</p>
+    </div>
+    <div style="background:var(--charcoal);padding:40px 32px;">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:48px;color:rgba(201,168,76,0.2);margin-bottom:16px;">4</div>
+      <div style="font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Confirm</div>
+      <p style="font-size:13px;color:var(--grey);margin:0;">Receive instant confirmation with your chauffeur details and journey summary</p>
     </div>
   </div>
 </section>
@@ -618,38 +772,38 @@
 <!-- FAQ -->
 <section class="section">
   <div class="section-label">FAQ</div>
-  <h2>Frequently Asked <em>Questions</em><br>About London Chauffeur Services</h2>
+  <h2>Frequently Asked <em>Questions</em></h2>
 
   <div class="faq-list">
 
     <div class="faq-item">
-      <div class="faq-q">What is the difference between a chauffeur and a taxi in London?</div>
-      <p class="faq-a">A chauffeur service in London is pre-booked, fixed-price, and operated by a professionally trained driver in a premium vehicle. Taxis and rideshare apps operate on a meter or dynamic pricing model and are typically hailed on demand. Chauffeur services are generally preferred for corporate travel, airport transfers, and occasions where reliability and presentation matter.</p>
+      <div class="faq-q">What areas does Ridealux cover?</div>
+      <p class="faq-a">Ridealux operates across all of London and covers all five major London airports including Heathrow, Gatwick, Stansted, Luton, and London City Airport. We also provide nationwide UK travel on request, including journeys to other major UK cities.</p>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">How far in advance should I book a London chauffeur?</div>
-      <p class="faq-a">For standard airport transfers and corporate journeys, booking 24 to 48 hours in advance is generally sufficient. For major events, roadshows, or group transportation, booking several days or even weeks ahead is recommended to secure vehicle availability and allow for proper coordination.</p>
+      <div class="faq-q">Does Ridealux offer fixed pricing?</div>
+      <p class="faq-a">Yes. All Ridealux journeys are priced transparently with no hidden charges or surge pricing. Your quote is confirmed at the time of booking and will not change regardless of traffic or journey duration.</p>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">Are London chauffeur services available 24 hours?</div>
-      <p class="faq-a">Most reputable London chauffeur companies operate 24 hours a day, 7 days a week, including public holidays. This is particularly important for early morning flight departures and late night arrivals at airports across the capital.</p>
+      <div class="faq-q">Can I book a chauffeur for a full day?</div>
+      <p class="faq-a">Absolutely. Ridealux offers flexible full-day and half-day private chauffeur hire for clients who require dedicated transportation for extended periods. Your chauffeur remains at your disposal for the entire duration.</p>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">What happens if my flight is delayed?</div>
-      <p class="faq-a">Quality chauffeur companies monitor live flight data and automatically adjust the driver's arrival time in the event of a delay or early landing. This service is typically included at no extra charge and ensures the passenger is not left waiting or charged for unexpected wait time.</p>
+      <div class="faq-q">How are flight delays handled?</div>
+      <p class="faq-a">Ridealux monitors all flights in real time. If your flight is delayed, your chauffeur automatically adjusts their arrival time — so you are never waiting and never paying for unnecessary extra time at the airport.</p>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">Can I hire a chauffeur for a full day in London?</div>
-      <p class="faq-a">Yes. Most London chauffeur companies offer full-day and half-day hire arrangements where a dedicated driver remains at the client's disposal for the entire period. This is commonly used for corporate away days, multi-meeting schedules, private shopping trips, and city tours.</p>
+      <div class="faq-q">Is Ridealux available 24 hours?</div>
+      <p class="faq-a">Yes. Ridealux operates 24 hours a day, 7 days a week, 365 days a year. Early morning departures, late night arrivals, overnight bookings, and public holiday travel are all fully accommodated.</p>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">Do London chauffeur companies cover destinations outside the city?</div>
-      <p class="faq-a">Many London-based chauffeur providers offer nationwide UK travel in addition to local London coverage. This includes transfers to other major cities, regional business locations, and UK airports outside of London. Always confirm nationwide availability with the provider at the time of booking.</p>
+      <div class="faq-q">Can Ridealux handle corporate account bookings?</div>
+      <p class="faq-a">Yes. Ridealux works with corporate clients and businesses to establish account-based booking arrangements with consolidated monthly invoicing, dedicated account management, and priority service.</p>
     </div>
 
   </div>
@@ -657,19 +811,41 @@
 
 <div class="gold-rule"></div>
 
-<!-- REFERENCE -->
-<div class="ref-wrap">
-  <div class="ref-inner">
-    <div class="section-label" style="justify-content:center;">Further Reading</div>
-    <h2>Looking for a<br><em>London Chauffeur</em>?</h2>
-    <p>For readers looking for a chauffeur service in London covering airport transfers, corporate travel, roadshows, events, and group transportation, Ridealux is a London-based provider worth considering.</p>
-    <a href="https://ridealux.com" class="ref-link">Visit ridealux.com</a>
+<!-- CTA -->
+<div class="cta-wrap">
+  <div class="cta-inner">
+    <div class="section-label" style="justify-content:center;">Book Now</div>
+    <h2>Ready to <em>Travel</em><br>in Style?</h2>
+    <p>Experience the difference a truly professional premium chauffeur service makes to your London travel. Book instantly online or contact our team.</p>
+    <a href="https://ridealux.com" class="cta-btn">Book at ridealux.com</a>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="contact-strip">
+  <div class="contact-inner">
+    <div class="contact-item">
+      <div class="contact-label">Website</div>
+      <a href="https://ridealux.com" class="contact-value">ridealux.com</a>
+    </div>
+    <div class="contact-item">
+      <div class="contact-label">Location</div>
+      <span class="contact-value">London, UK</span>
+    </div>
+    <div class="contact-item">
+      <div class="contact-label">Service Area</div>
+      <span class="contact-value">London & Nationwide</span>
+    </div>
+    <div class="contact-item">
+      <div class="contact-label">Availability</div>
+      <span class="contact-value">24 / 7 / 365</span>
+    </div>
   </div>
 </div>
 
 <!-- FOOTER -->
 <footer>
-  <p>Chauffeur Services London Guide &nbsp;·&nbsp; Informational Resource &nbsp;·&nbsp; <span>ridealux.com</span> &nbsp;·&nbsp; Updated 2026</p>
+  <p><span>Ridealux</span> &nbsp;·&nbsp; Premium Chauffeur Service &nbsp;·&nbsp; London, United Kingdom &nbsp;·&nbsp; <span>ridealux.com</span></p>
 </footer>
 
 </body>

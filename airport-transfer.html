@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Airport Transfer London | Ridealux Premium Chauffeur</title>
+<meta name="description" content="Premium airport transfer service in London. Ridealux provides chauffeur-driven transfers to and from Heathrow, Gatwick, Stansted, Luton and London City Airport.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A84C; --gold-light: #E8C97A;
+    --black: #0A0A0A; --charcoal: #1A1A1A;
+    --dark: #111111; --grey: #888888;
+    --light-grey: #CCCCCC; --white: #FAFAFA;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--black); color: var(--white); font-family: 'Montserrat', sans-serif; font-weight: 300; line-height: 1.8; overflow-x: hidden; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 24px 48px; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(to bottom, rgba(10,10,10,0.95), transparent); }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 300; color: var(--white); text-decoration: none; }
+  .nav-logo em { font-style: italic; color: var(--gold); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { font-size: 10px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--light-grey); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* HERO */
+  .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; padding: 80px 40px; background: radial-gradient(ellipse at 50% 60%, #1c1500 0%, #0A0A0A 70%); overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(201,168,76,0.03) 60px, rgba(201,168,76,0.03) 61px), repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(201,168,76,0.03) 60px, rgba(201,168,76,0.03) 61px); }
+  .hero-badge { display: inline-block; border: 1px solid var(--gold); color: var(--gold); font-size: 10px; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; padding: 8px 24px; margin-bottom: 40px; position: relative; z-index: 1; animation: fadeUp 1s ease both; }
+  .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(48px, 7vw, 90px); font-weight: 300; line-height: 1.05; color: var(--white); position: relative; z-index: 1; animation: fadeUp 1s ease 0.2s both; }
+  .hero h1 em { font-style: italic; color: var(--gold); }
+  .hero-sub { margin-top: 28px; font-size: 13px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: var(--grey); position: relative; z-index: 1; animation: fadeUp 1s ease 0.4s both; }
+  .hero-divider { width: 1px; height: 80px; background: linear-gradient(to bottom, var(--gold), transparent); margin: 48px auto 0; position: relative; z-index: 1; }
+  .gold-rule { width: 100%; height: 1px; background: linear-gradient(to right, transparent, var(--gold), transparent); }
+
+  /* SECTIONS */
+  .section { padding: 100px 40px; max-width: 1100px; margin: 0 auto; text-align: center; }
+  .section-label { font-size: 10px; font-weight: 500; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 16px; }
+  .section-label::before, .section-label::after { content: ''; display: inline-block; width: 40px; height: 1px; background: var(--gold); }
+  h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 58px); font-weight: 300; line-height: 1.1; color: var(--white); margin-bottom: 48px; text-align: center; }
+  h2 em { font-style: italic; color: var(--gold); }
+  h3 { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 400; color: var(--gold-light); margin-bottom: 16px; text-align: center; }
+  p { font-size: 14px; color: var(--light-grey); line-height: 1.9; margin-bottom: 20px; max-width: 700px; margin-left: auto; margin-right: auto; text-align: center; }
+
+  /* AIRPORTS GRID */
+  .airports-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2px; background: rgba(201,168,76,0.1); margin-top: 60px; }
+  .airport-card { background: var(--charcoal); padding: 48px 40px; text-align: center; position: relative; overflow: hidden; transition: background 0.3s; }
+  .airport-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); transform: scaleX(0); transition: transform 0.4s ease; }
+  .airport-card:hover { background: #1e1e1e; }
+  .airport-card:hover::after { transform: scaleX(1); }
+  .airport-code { font-family: 'Cormorant Garamond', serif; font-size: 56px; font-weight: 300; color: rgba(201,168,76,0.2); line-height: 1; margin-bottom: 16px; }
+  .airport-name { font-size: 14px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--white); margin-bottom: 12px; }
+  .airport-desc { font-size: 12px; color: var(--grey); margin: 0; }
+
+  /* INCLUDES */
+  .includes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-top: 60px; }
+  .include-item { border-top: 1px solid rgba(201,168,76,0.3); padding-top: 28px; text-align: center; }
+  .include-icon { font-size: 32px; margin-bottom: 16px; display: block; }
+  .include-title { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .include-item p { font-size: 12px; color: var(--grey); margin: 0; }
+
+  /* PROCESS */
+  .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2px; background: rgba(201,168,76,0.08); margin-top: 60px; }
+  .process-step { background: var(--dark); padding: 48px 32px; text-align: center; }
+  .step-num { font-family: 'Cormorant Garamond', serif; font-size: 64px; font-weight: 300; color: rgba(201,168,76,0.15); line-height: 1; margin-bottom: 20px; }
+  .step-title { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .process-step p { font-size: 12px; color: var(--grey); margin: 0; }
+
+  /* CTA */
+  .cta-wrap { background: linear-gradient(135deg, #0f0e00 0%, #1a1500 50%, #0A0A0A 100%); padding: 120px 40px; text-align: center; position: relative; overflow: hidden; }
+  .cta-wrap::before { content: 'RIDEALUX'; position: absolute; font-family: 'Cormorant Garamond', serif; font-size: 180px; font-weight: 300; color: rgba(201,168,76,0.04); top: 50%; left: 50%; transform: translate(-50%, -50%); white-space: nowrap; pointer-events: none; letter-spacing: 20px; }
+  .cta-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
+  .cta-inner h2 { font-size: clamp(42px, 6vw, 72px); margin-bottom: 24px; }
+  .cta-inner p { color: var(--grey); margin-bottom: 48px; }
+  .cta-btn { display: inline-block; background: var(--gold); color: var(--black); font-size: 11px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; padding: 18px 56px; text-decoration: none; transition: background 0.3s, transform 0.2s; }
+  .cta-btn:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+  /* FOOTER */
+  .contact-strip { background: var(--charcoal); padding: 60px 40px; }
+  .contact-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 40px; text-align: center; }
+  .contact-label { font-size: 10px; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+  .contact-value { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--white); text-decoration: none; display: block; }
+  .contact-value:hover { color: var(--gold); }
+  footer { background: var(--black); padding: 40px; text-align: center; border-top: 1px solid rgba(201,168,76,0.15); }
+  footer p { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.2); margin: 0; max-width: 100%; }
+  footer span { color: var(--gold); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 768px) { nav { padding: 20px 24px; } .nav-links { display: none; } .section { padding: 70px 24px; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Ridea<em>lux</em></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="airport-transfer.html">Airport</a></li>
+    <li><a href="corporate-chauffeur.html">Corporate</a></li>
+    <li><a href="events-transportation.html">Events</a></li>
+    <li><a href="roadshow-transportation.html">Roadshow</a></li>
+    <li><a href="london-chauffeur.html">London</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">London Airport Transfer Service</div>
+  <h1>Airport<br><em>Transfers</em></h1>
+  <p class="hero-sub">Heathrow &nbsp;·&nbsp; Gatwick &nbsp;·&nbsp; Stansted &nbsp;·&nbsp; Luton &nbsp;·&nbsp; London City</p>
+  <div class="hero-divider"></div>
+</section>
+
+<div class="gold-rule"></div>
+
+<section class="section">
+  <div class="section-label">Premium Airport Transfers</div>
+  <h2>London's Most <em>Reliable</em><br>Airport Chauffeur</h2>
+  <p>Ridealux provides premium chauffeur-driven airport transfer services across all five major London airports. Whether you are arriving after a long-haul flight or departing for an important business trip, our professional chauffeurs ensure you travel in complete comfort, on time, every time.</p>
+  <p>Every Ridealux airport transfer includes real-time flight monitoring, complimentary waiting time, and a professional meet and greet service — because your journey begins the moment you land. Book at <a href="https://ridealux.com" style="color:var(--gold);text-decoration:none;">ridealux.com</a></p>
+</section>
+
+<div class="gold-rule"></div>
+
+<section class="section">
+  <div class="section-label">Airports We Cover</div>
+  <h2>All Five London <em>Airports</em></h2>
+  <div class="airports-grid">
+    <div class="airport-card">
+      <div class="airport-code">LHR</div>
+      <div class="airport-name">Heathrow Airport</div>
+      <p class="airport-desc">All terminals covered. Meet and greet in arrivals hall. Fixed pricing for all Heathrow transfers with no surge charges.</p>
+    </div>
+    <div class="airport-card">
+      <div class="airport-code">LGW</div>
+      <div class="airport-name">Gatwick Airport</div>
+      <p class="airport-desc">North and South terminals. Executive chauffeur service for business and leisure travellers departing or arriving at Gatwick.</p>
+    </div>
+    <div class="airport-card">
+      <div class="airport-code">STN</div>
+      <div class="airport-name">Stansted Airport</div>
+      <p class="airport-desc">Premium transfers to and from Stansted with real-time flight tracking and comfortable luxury vehicles for every journey.</p>
+    </div>
+    <div class="airport-card">
+      <div class="airport-code">LTN</div>
+      <div class="airport-name">Luton Airport</div>
+      <p class="airport-desc">Reliable, punctual transfers from Luton Airport to London and surrounding areas in a fleet of premium luxury vehicles.</p>
+    </div>
+    <div class="airport-card">
+      <div class="airport-code">LCY</div>
+      <div class="airport-name">London City Airport</div>
+      <p class="airport-desc">Specialist business transfer service for London City Airport — the preferred airport for corporate and financial district travellers.</p>
+    </div>
+  </div>
+</section>
+
+<div class="gold-rule"></div>
+
+<section class="section">
+  <div class="section-label">What's Included</div>
+  <h2>Every Transfer <em>Includes</em></h2>
+  <div class="includes-grid">
+    <div class="include-item">
+      <span class="include-icon">✈</span>
+      <div class="include-title">Flight Tracking</div>
+      <p>We monitor your flight in real time. If it lands early or late, your chauffeur adjusts automatically.</p>
+    </div>
+    <div class="include-item">
+      <span class="include-icon">🤝</span>
+      <div class="include-title">Meet & Greet</div>
+      <p>Your chauffeur meets you in the arrivals hall with a name board, ready to assist with luggage.</p>
+    </div>
+    <div class="include-item">
+      <span class="include-icon">⏱</span>
+      <div class="include-title">Free Waiting Time</div>
+      <p>Complimentary waiting time included on all airport arrivals so you never feel rushed after landing.</p>
+    </div>
+    <div class="include-item">
+      <span class="include-icon">💷</span>
+      <div class="include-title">Fixed Pricing</div>
+      <p>No surge pricing, no hidden fees. Your fare is confirmed at booking and never changes.</p>
+    </div>
+    <div class="include-item">
+      <span class="include-icon">🚗</span>
+      <div class="include-title">Luxury Vehicle</div>
+      <p>Travel in a premium Mercedes, BMW, or Range Rover — immaculately presented for every journey.</p>
+    </div>
+    <div class="include-item">
+      <span class="include-icon">📱</span>
+      <div class="include-title">24/7 Availability</div>
+      <p>Early morning departures, red-eye arrivals — Ridealux is available around the clock, every day.</p>
+    </div>
+  </div>
+</section>
+
+<div class="gold-rule"></div>
+
+<section class="section">
+  <div class="section-label">How It Works</div>
+  <h2>Your Transfer in <em>4 Steps</em></h2>
+  <div class="process-grid">
+    <div class="process-step">
+      <div class="step-num">1</div>
+      <div class="step-title">Book Online</div>
+      <p>Visit ridealux.com, enter your flight details, pickup address, and preferred vehicle class.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">2</div>
+      <div class="step-title">We Track</div>
+      <p>Ridealux monitors your flight in real time and dispatches your chauffeur based on actual landing time.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">3</div>
+      <div class="step-title">Meet & Greet</div>
+      <p>Your chauffeur greets you in arrivals with a name board and assists with all luggage to the vehicle.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">4</div>
+      <div class="step-title">Travel in Style</div>
+      <p>Relax in a premium luxury vehicle and arrive at your destination refreshed and on time.</p>
+    </div>
+  </div>
+</section>
+
+<div class="gold-rule"></div>
+
+<div class="cta-wrap">
+  <div class="cta-inner">
+    <div class="section-label" style="justify-content:center;">Book Your Transfer</div>
+    <h2>Ready for a <em>Seamless</em><br>Airport Transfer?</h2>
+    <p>Book your premium London airport transfer with Ridealux today. Fixed pricing, professional chauffeurs, and guaranteed punctuality.</p>
+    <a href="https://ridealux.com" class="cta-btn">Book at ridealux.com</a>
+  </div>
+</div>
+
+<div class="contact-strip">
+  <div class="contact-inner">
+    <div><div class="contact-label">Website</div><a href="https://ridealux.com" class="contact-value">ridealux.com</a></div>
+    <div><div class="contact-label">Service</div><span class="contact-value">Airport Transfers</span></div>
+    <div><div class="contact-label">Coverage</div><span class="contact-value">All London Airports</span></div>
+    <div><div class="contact-label">Available</div><span class="contact-value">24 / 7 / 365</span></div>
+  </div>
+</div>
+
+<footer><p><span>Ridealux</span> &nbsp;·&nbsp; Premium Airport Transfer London &nbsp;·&nbsp; <span>ridealux.com</span></p></footer>
+
+</body>
+</html>

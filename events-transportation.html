@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events Transportation London | Ridealux Chauffeur Service</title>
+<meta name="description" content="Premium events transportation in London. Ridealux provides luxury chauffeur services for corporate galas, award ceremonies, product launches, premieres and private events.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --gold: #C9A84C; --gold-light: #E8C97A; --black: #0A0A0A; --charcoal: #1A1A1A; --dark: #111111; --grey: #888888; --light-grey: #CCCCCC; --white: #FAFAFA; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--black); color: var(--white); font-family: 'Montserrat', sans-serif; font-weight: 300; line-height: 1.8; overflow-x: hidden; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 24px 48px; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(to bottom, rgba(10,10,10,0.95), transparent); }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 300; color: var(--white); text-decoration: none; }
+  .nav-logo em { font-style: italic; color: var(--gold); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { font-size: 10px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--light-grey); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--gold); }
+  .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; padding: 80px 40px; background: radial-gradient(ellipse at 50% 60%, #1c1500 0%, #0A0A0A 70%); overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(201,168,76,0.03) 60px, rgba(201,168,76,0.03) 61px), repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(201,168,76,0.03) 60px, rgba(201,168,76,0.03) 61px); }
+  .hero-badge { display: inline-block; border: 1px solid var(--gold); color: var(--gold); font-size: 10px; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; padding: 8px 24px; margin-bottom: 40px; position: relative; z-index: 1; animation: fadeUp 1s ease both; }
+  .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(48px, 7vw, 90px); font-weight: 300; line-height: 1.05; color: var(--white); position: relative; z-index: 1; animation: fadeUp 1s ease 0.2s both; }
+  .hero h1 em { font-style: italic; color: var(--gold); }
+  .hero-sub { margin-top: 28px; font-size: 13px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: var(--grey); position: relative; z-index: 1; animation: fadeUp 1s ease 0.4s both; }
+  .hero-divider { width: 1px; height: 80px; background: linear-gradient(to bottom, var(--gold), transparent); margin: 48px auto 0; }
+  .gold-rule { width: 100%; height: 1px; background: linear-gradient(to right, transparent, var(--gold), transparent); }
+  .section { padding: 100px 40px; max-width: 1100px; margin: 0 auto; text-align: center; }
+  .section-label { font-size: 10px; font-weight: 500; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 16px; }
+  .section-label::before, .section-label::after { content: ''; display: inline-block; width: 40px; height: 1px; background: var(--gold); }
+  h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 58px); font-weight: 300; line-height: 1.1; color: var(--white); margin-bottom: 48px; text-align: center; }
+  h2 em { font-style: italic; color: var(--gold); }
+  p { font-size: 14px; color: var(--light-grey); line-height: 1.9; margin-bottom: 20px; max-width: 700px; margin-left: auto; margin-right: auto; text-align: center; }
+
+  .events-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2px; background: rgba(201,168,76,0.1); margin-top: 60px; }
+  .event-card { background: var(--charcoal); padding: 48px 36px; text-align: center; position: relative; transition: background 0.3s; }
+  .event-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); transform: scaleX(0); transition: transform 0.4s; }
+  .event-card:hover { background: #1e1e1e; }
+  .event-card:hover::after { transform: scaleX(1); }
+  .event-icon { font-size: 40px; margin-bottom: 24px; display: block; }
+  .event-title { font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--white); margin-bottom: 16px; }
+  .event-card p { font-size: 12px; color: var(--grey); margin: 0; }
+
+  .venues-wrap { background: var(--charcoal); padding: 80px 40px; }
+  .venues-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+  .venues-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0; margin-top: 48px; border: 1px solid rgba(201,168,76,0.15); }
+  .venue-item { padding: 20px 24px; font-size: 12px; font-weight: 500; letter-spacing: 1px; color: var(--light-grey); border-right: 1px solid rgba(201,168,76,0.1); border-bottom: 1px solid rgba(201,168,76,0.1); transition: color 0.2s, background 0.2s; text-align: center; }
+  .venue-item:hover { color: var(--gold); background: rgba(201,168,76,0.05); }
+
+  .pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; margin-top: 60px; }
+  .pillar { border-top: 1px solid rgba(201,168,76,0.3); padding-top: 28px; text-align: center; }
+  .pillar-title { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+  .pillar p { font-size: 12px; color: var(--grey); margin: 0; }
+
+  .cta-wrap { background: linear-gradient(135deg, #0f0e00 0%, #1a1500 50%, #0A0A0A 100%); padding: 120px 40px; text-align: center; position: relative; overflow: hidden; }
+  .cta-wrap::before { content: 'RIDEALUX'; position: absolute; font-family: 'Cormorant Garamond', serif; font-size: 180px; font-weight: 300; color: rgba(201,168,76,0.04); top: 50%; left: 50%; transform: translate(-50%, -50%); white-space: nowrap; pointer-events: none; letter-spacing: 20px; }
+  .cta-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
+  .cta-inner h2 { font-size: clamp(42px, 6vw, 72px); margin-bottom: 24px; }
+  .cta-btn { display: inline-block; background: var(--gold); color: var(--black); font-size: 11px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; padding: 18px 56px; text-decoration: none; transition: background 0.3s, transform 0.2s; }
+  .cta-btn:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .contact-strip { background: var(--charcoal); padding: 60px 40px; }
+  .contact-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 40px; text-align: center; }
+  .contact-label { font-size: 10px; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+  .contact-value { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--white); text-decoration: none; display: block; }
+  .contact-value:hover { color: var(--gold); }
+  footer { background: var(--black); padding: 40px; text-align: center; border-top: 1px solid rgba(201,168,76,0.15); }
+  footer p { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.2); margin: 0; max-width: 100%; }
+  footer span { color: var(--gold); }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 768px) { nav { padding: 20px 24px; } .nav-links { display: none; } .section { padding: 70px 24px; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Ridea<em>lux</em></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="airport-transfer.html">Airport</a></li>
+    <li><a href="corporate-chauffeur.html">Corporate</a></li>
+    <li><a href="events-transportation.html">Events</a></li>
+    <li><a href="roadshow-transportation.html">Roadshow</a></li>
+    <li><a href="london-chauffeur.html">London</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">London Event Chauffeur Service</div>
+  <h1>Events<br><em>Transportation</em></h1>
+  <p class="hero-sub">Galas &nbsp;·&nbsp; Premieres &nbsp;·&nbsp; Ceremonies &nbsp;·&nbsp; Launches</p>
+  <div class="hero-divider"></div>
+</section>
+
+<div class="gold-rule"></div>
+
+<section class="section">
+  <div class="section-label">Event Chauffeur</div>
+  <h2>Arrive in <em>Style</em><br>at Every Event</h2>
+  <p>Ridealux provides premium events transportation for London's most prestigious occasions. From corporate galas and award ceremonies to product launches, film premieres, and charity dinners — our chauffeurs ensure you arrive and depart with the elegance and punctuality your event demands.</p>
+  <p>We understand that events move on tight schedules. Ridealux coordinates every pickup and drop-off with precision, so your guests travel in complete comfort and arrive exactly when they should. Book at <a href="https://ridealux.com" style="color:var(--gold);text-decoration:none;">ridealux.com</a></p>
+</section>
+
+<div class="gold-rule"></div>
+
+<section class="section">
+  <div class="section-label">Events We Cover</div>
+  <h2>Every <em>Occasion</em><br>Deserves the Best</h2>
+  <div class="events-grid">
+    <div class="event-card"><span class="event-icon">🏆</span><div class="event-title">Award Ceremonies</div><p>Punctual, elegant arrivals for BAFTA, business awards, industry galas, and black-tie ceremonies across London.</p></div>
+    <div class="event-card"><span class="event-icon">🎬</span><div class="event-title">Film Premieres</div><p>Professional chauffeur service for red carpet arrivals at London's most prestigious film premieres and industry events.</p></div>
+    <div class="event-card"><span class="event-icon">🎪</span><div class="event-title">Corporate Galas</div><p>Seamless transportation for corporate dinner events, client entertainment evenings, and company celebrations.</p></div>
+    <div class="event-card"><span class="event-icon">🚀</span><div class="event-title">Product Launches</div><p>Impress guests and media at your product launch with coordinated, premium chauffeur arrivals that make an impression.</p></div>
+    <div class="event-card"><span class="event-icon">🎭</span><div class="event-title">Private Events</div><p>Discreet, professional chauffeur service for private dinners, exclusive parties, and VIP gatherings across London.</p></div>
+    <div class="event-card"><span class="event-icon">💼</span><div class="event-title">Conferences</div><p>Multi-vehicle coordination for conference delegates, keynote speakers, and executive attendees at London venues.</p></div>
+  </div>
+</section>
+
+<div class="gold-rule"></div>
+
+<div class="venues-wrap">
+  <div class="venues-inner">
+    <div class="section-label">London Venues</div>
+    <h2>We Know <em>Every</em> London Venue</h2>
+    <p>Our chauffeurs are experienced with London's premier event venues, ensuring seamless arrivals and departures every time.</p>
+    <div class="venues-grid">
+      <div class="venue-item">The Savoy</div>
+      <div class="venue-item">Claridge's</div>
+      <div class="venue-item">The Dorchester</div>
+      <div class="venue-item">Grosvenor House</div>
+      <div class="venue-item">Royal Albert Hall</div>
+      <div class="venue-item">O2 Arena</div>
+      <div class="venue-item">ExCeL London</div>
+      <div class="venue-item">Olympia London</div>
+      <div class="venue-item">Barbican Centre</div>
+      <div class="venue-item">Guildhall</div>
+      <div class="venue-item">Tate Modern</div>
+      <div class="venue-item">Natural History Museum</div>
+      <div class="venue-item">Battersea Power Station</div>
+      <div class="venue-item">Somerset House</div>
+      <div class="venue-item">Chelsea FC</div>
+      <div class="venue-item">Wembley Stadium</div>
+    </div>
+  </div>
+</div>
+
+<div class="gold-rule"></div>
+
+<section class="section">
+  <div class="section-label">Our Promise</div>
+  <h2>The Ridealux <em>Events</em> Standard</h2>
+  <div class="pillars">
+    <div class="pillar"><div class="pillar-title">Precise Timing</div><p>Events run on schedules. Our chauffeurs plan every route and arrival to ensure guests never miss a moment.</p></div>
+    <div class="pillar"><div class="pillar-title">Multi-Vehicle Coordination</div><p>For large events requiring multiple vehicles, Ridealux coordinates the entire fleet seamlessly as one operation.</p></div>
+    <div class="pillar"><div class="pillar-title">VIP Discretion</div><p>High-profile guests travel with complete privacy and confidentiality on every Ridealux events transfer.</p></div>
+    <div class="pillar"><div class="pillar-title">Flexible Scheduling</div><p>Events overrun. Ridealux chauffeurs are briefed to be flexible and patient, adapting to changing event timelines.</p></div>
+  </div>
+</section>
+
+<div class="gold-rule"></div>
+
+<div class="cta-wrap">
+  <div class="cta-inner">
+    <div class="section-label" style="justify-content:center;">Book Events Transport</div>
+    <h2>Make Every <em>Arrival</em><br>Unforgettable</h2>
+    <p>Book premium events transportation with Ridealux and ensure your guests travel in the style your occasion deserves.</p>
+    <a href="https://ridealux.com" class="cta-btn">Book at ridealux.com</a>
+  </div>
+</div>
+
+<div class="contact-strip">
+  <div class="contact-inner">
+    <div><div class="contact-label">Website</div><a href="https://ridealux.com" class="contact-value">ridealux.com</a></div>
+    <div><div class="contact-label">Service</div><span class="contact-value">Events Transportation</span></div>
+    <div><div class="contact-label">Location</div><span class="contact-value">London, UK</span></div>
+    <div><div class="contact-label">Available</div><span class="contact-value">24 / 7 / 365</span></div>
+  </div>
+</div>
+<footer><p><span>Ridealux</span> &nbsp;·&nbsp; Events Transportation London &nbsp;·&nbsp; <span>ridealux.com</span></p></footer>
+</body>
+</html>

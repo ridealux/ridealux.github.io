@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Ridealux | Book a Premium Chauffeur in London</title>
+<meta name="description" content="Contact Ridealux to book a premium chauffeur service in London. Airport transfers, corporate travel, events, roadshows and group transportation. Available 24/7.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --gold: #C9A84C; --gold-light: #E8C97A; --black: #0A0A0A; --charcoal: #1A1A1A; --dark: #111111; --grey: #888888; --light-grey: #CCCCCC; --white: #FAFAFA; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--black); color: var(--white); font-family: 'Montserrat', sans-serif; font-weight: 300; line-height: 1.8; overflow-x: hidden; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 24px 48px; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(to bottom, rgba(10,10,10,0.95), transparent); }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 300; color: var(--white); text-decoration: none; }
+  .nav-logo em { font-style: italic; color: var(--gold); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { font-size: 10px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--light-grey); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--gold); }
+  .hero { min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; padding: 120px 40px 80px; background: radial-gradient(ellipse at 50% 60%, #1c1500 0%, #0A0A0A 70%); overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(201,168,76,0.03) 60px, rgba(201,168,76,0.03) 61px), repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(201,168,76,0.03) 60px, rgba(201,168,76,0.03) 61px); }
+  .hero-badge { display: inline-block; border: 1px solid var(--gold); color: var(--gold); font-size: 10px; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; padding: 8px 24px; margin-bottom: 40px; position: relative; z-index: 1; animation: fadeUp 1s ease both; }
+  .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(48px, 7vw, 86px); font-weight: 300; line-height: 1.05; color: var(--white); position: relative; z-index: 1; animation: fadeUp 1s ease 0.2s both; }
+  .hero h1 em { font-style: italic; color: var(--gold); }
+  .hero-sub { margin-top: 24px; font-size: 13px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: var(--grey); position: relative; z-index: 1; }
+  .gold-rule { width: 100%; height: 1px; background: linear-gradient(to right, transparent, var(--gold), transparent); }
+  .section { padding: 100px 40px; max-width: 1100px; margin: 0 auto; text-align: center; }
+  .section-label { font-size: 10px; font-weight: 500; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 16px; }
+  .section-label::before, .section-label::after { content: ''; display: inline-block; width: 40px; height: 1px; background: var(--gold); }
+  h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 58px); font-weight: 300; line-height: 1.1; color: var(--white); margin-bottom: 48px; text-align: center; }
+  h2 em { font-style: italic; color: var(--gold); }
+  p { font-size: 14px; color: var(--light-grey); line-height: 1.9; margin-bottom: 20px; max-width: 700px; margin-left: auto; margin-right: auto; text-align: center; }
+
+  .contact-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2px; background: rgba(201,168,76,0.1); margin-top: 60px; }
+  .contact-card { background: var(--charcoal); padding: 56px 40px; text-align: center; position: relative; transition: background 0.3s; }
+  .contact-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); transform: scaleX(0); transition: transform 0.4s; }
+  .contact-card:hover { background: #1e1e1e; }
+  .contact-card:hover::after { transform: scaleX(1); }
+  .cc-icon { font-size: 40px; margin-bottom: 24px; display: block; }
+  .cc-label { font-size: 10px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+  .cc-value { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; color: var(--white); text-decoration: none; display: block; transition: color 0.2s; }
+  .cc-value:hover { color: var(--gold); }
+  .cc-note { font-size: 11px; color: var(--grey); margin-top: 8px; margin-bottom: 0; }
+
+  .services-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2px; background: rgba(201,168,76,0.08); margin-top: 60px; }
+  .svc-link { background: var(--dark); padding: 36px 32px; text-align: center; text-decoration: none; transition: background 0.3s; display: block; }
+  .svc-link:hover { background: #1e1e1e; }
+  .svc-link-title { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+  .svc-link-desc { font-size: 12px; color: var(--grey); }
+  .arrow { color: var(--gold); margin-top: 16px; display: block; font-size: 18px; }
+
+  .cta-wrap { background: linear-gradient(135deg, #0f0e00 0%, #1a1500 50%, #0A0A0A 100%); padding: 120px 40px; text-align: center; position: relative; overflow: hidden; }
+  .cta-wrap::before { content: 'RIDEALUX'; position: absolute; font-family: 'Cormorant Garamond', serif; font-size: 180px; font-weight: 300; color: rgba(201,168,76,0.04); top: 50%; left: 50%; transform: translate(-50%, -50%); white-space: nowrap; pointer-events: none; letter-spacing: 20px; }
+  .cta-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
+  .cta-inner h2 { font-size: clamp(42px, 6vw, 72px); margin-bottom: 24px; }
+  .cta-btn { display: inline-block; background: var(--gold); color: var(--black); font-size: 11px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; padding: 18px 56px; text-decoration: none; transition: background 0.3s, transform 0.2s; }
+  .cta-btn:hover { background: var(--gold-light); transform: translateY(-2px); }
+  footer { background: var(--black); padding: 40px; text-align: center; border-top: 1px solid rgba(201,168,76,0.15); }
+  footer p { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.2); margin: 0; max-width: 100%; }
+  footer span { color: var(--gold); }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 768px) { nav { padding: 20px 24px; } .nav-links { display: none; } .section { padding: 70px 24px; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Ridea<em>lux</em></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="airport-transfer.html">Airport</a></li>
+    <li><a href="corporate-chauffeur.html">Corporate</a></li>
+    <li><a href="events-transportation.html">Events</a></li>
+    <li><a href="roadshow-transportation.html">Roadshow</a></li>
+    <li><a href="london-chauffeur.html">London</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">Get in Touch</div>
+  <h1>Contact<br><em>Ridealux</em></h1>
+  <p class="hero-sub">Available 24 / 7 / 365</p>
+</section>
+
+<div class="gold-rule"></div>
+
+<section class="section">
+  <div class="section-label">Book or Enquire</div>
+  <h2>We Are <em>Always</em><br>Here for You</h2>
+  <p>Whether you are ready to book a journey, enquire about a corporate account, or discuss a bespoke travel requirement, the Ridealux team is available around the clock to assist you.</p>
+
+  <div class="contact-cards">
+    <div class="contact-card">
+      <span class="cc-icon">🌐</span>
+      <div class="cc-label">Book Online</div>
+      <a href="https://ridealux.com" class="cc-value">ridealux.com</a>
+      <p class="cc-note">Instant booking, instant confirmation</p>
+    </div>
+    <div class="contact-card">
+      <span class="cc-icon">📍</span>
+      <div class="cc-label">Based In</div>
+      <span class="cc-value">London, UK</span>
+      <p class="cc-note">Serving London & Nationwide</p>
+    </div>
+    <div class="contact-card">
+      <span class="cc-icon">🕐</span>
+      <div class="cc-label">Availability</div>
+      <span class="cc-value">24 / 7 / 365</span>
+      <p class="cc-note">Including holidays & overnight</p>
+    </div>
+  </div>
+</section>
+
+<div class="gold-rule"></div>
+
+<section class="section">
+  <div class="section-label">Our Services</div>
+  <h2>Explore What <em>Ridealux</em> Offers</h2>
+  <p>Every journey is different. Explore our specialist services and find the right chauffeur solution for your travel needs.</p>
+  <div class="services-links">
+    <a href="airport-transfer.html" class="svc-link">
+      <div class="svc-link-title">Airport Transfers</div>
+      <div class="svc-link-desc">All five London airports, real-time flight tracking</div>
+      <span class="arrow">→</span>
+    </a>
+    <a href="corporate-chauffeur.html" class="svc-link">
+      <div class="svc-link-title">Corporate Chauffeur</div>
+      <div class="svc-link-desc">Executive commutes, client collections, accounts</div>
+      <span class="arrow">→</span>
+    </a>
+    <a href="roadshow-transportation.html" class="svc-link">
+      <div class="svc-link-title">Roadshow Transport</div>
+      <div class="svc-link-desc">Specialist financial & investment roadshows</div>
+      <span class="arrow">→</span>
+    </a>
+    <a href="events-transportation.html" class="svc-link">
+      <div class="svc-link-title">Events Transportation</div>
+      <div class="svc-link-desc">Galas, premieres, ceremonies & launches</div>
+      <span class="arrow">→</span>
+    </a>
+    <a href="london-chauffeur.html" class="svc-link">
+      <div class="svc-link-title">London Chauffeur</div>
+      <div class="svc-link-desc">All areas, all occasions, all hours</div>
+      <span class="arrow">→</span>
+    </a>
+    <a href="index.html" class="svc-link">
+      <div class="svc-link-title">Private Hire</div>
+      <div class="svc-link-desc">Full day & half day dedicated chauffeur</div>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<div class="gold-rule"></div>
+
+<div class="cta-wrap">
+  <div class="cta-inner">
+    <div class="section-label" style="justify-content:center;">Ready to Travel</div>
+    <h2>Book Your <em>Ridealux</em><br>Chauffeur Now</h2>
+    <p>Experience London's most professional chauffeur service. Book instantly online at ridealux.com</p>
+    <a href="https://ridealux.com" class="cta-btn">Book at ridealux.com</a>
+  </div>
+</div>
+
+<footer><p><span>Ridealux</span> &nbsp;·&nbsp; Premium Chauffeur Service London &nbsp;·&nbsp; <span>ridealux.com</span></p></footer>
+</body>
+</html>
